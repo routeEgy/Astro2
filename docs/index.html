@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TAILWIND-CSS</title>
+    <link rel="stylesheet" href="css/output.css" />
+  </head>
+  <!-- max-w-screen-xl -->
+  <body class="dark:bg-gray-900 dark:text-white ">
+    <nav
+      class="bg-white border-b-gray-200/30 border-b-2 dark:bg-gray-900 fixed z-50 top-0 left-0 right-0"
+    >
+      <div
+        class="max-w-screen-xl container flex flex-wrap items-center justify-between mx-auto py-4"
+      >
+        <a
+          href="https://flowbite.com/"
+          class="flex items-center space-x-3 rtl:space-x-reverse"
+        >
+          <span
+            class="font-main-heading self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+            >Astro</span
+          >
+        </a>
+        <button
+          data-collapse-toggle="navbar-default"
+          type="button"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          aria-controls="navbar-default"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Open main menu</span>
+          <svg
+            class="w-5 h-5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 17 14"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M1 1h15M1 7h15M1 13h15"
+            />
+          </svg>
+        </button>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+          <ul
+            class="font-medium items-center flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+          >
+            <li>
+              <a
+                href="#"
+                class="block py-2 px-3 text-white bg-sky-700 rounded md:bg-transparent md:text-sky-700 md:p-0 dark:text-white md:dark:text-sky-500"
+                aria-current="page"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-sky-700 md:p-0 dark:text-white md:dark:hover:text-sky-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-sky-700 md:p-0 dark:text-white md:dark:hover:text-sky-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-sky-700 md:p-0 dark:text-white md:dark:hover:text-sky-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >Pricing</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-sky-700 md:p-0 dark:text-white md:dark:hover:text-sky-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >Contact
+
+                <span
+                  class="bg-sky-100 ml-2 animate-pulse text-sky-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-sky-900 dark:text-sky-300"
+                  >Default</span
+                >
+              </a>
+            </li>
+            <li>
+              <button
+                id="theme-toggle"
+                type="button"
+                class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5"
+              >
+                <svg
+                  id="theme-toggle-dark-icon"
+                  class="hidden w-5 h-5"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+                  ></path>
+                </svg>
+                <svg
+                  id="theme-toggle-light-icon"
+                  class="hidden w-5 h-5"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="header">
+      <div
+        class="container pt-[100px] text-center md:text-left flex flex-col md:flex-row md:items-center mx-auto justify-center max-w-screen-xl min-h-screen"
+      >
+        <div class="mt-auto md:mt-0 mb-5">
+          <h1 class="text-5xl mb-8 font-main-heading">
+            Marketing website done with Astro.
+          </h1>
+          <p class="max-w-xl mb-4 mx-auto">
+            Astroship is a starter template for startups, marketing websites &
+            landing pages. Built with Astro.build and TailwindCSS. You can
+            quickly create any website with this starter.
+          </p>
+
+          <div class="flex justify-center md:justify-start gap-2 md:gap-4">
+            <button
+              class="flex gap-5 transition-colors duration-500 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+            >
+              <svg
+                id="Download_from_the_Cloud_24"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <rect
+                  width="24"
+                  height="24"
+                  stroke="none"
+                  fill="#000000"
+                  opacity="0"
+                />
+
+                <g transform="matrix(0.4 0 0 0.4 12 12)">
+                  <path
+                    style="
+                      stroke: none;
+                      stroke-width: 1;
+                      stroke-dasharray: none;
+                      stroke-linecap: butt;
+                      stroke-dashoffset: 0;
+                      stroke-linejoin: miter;
+                      stroke-miterlimit: 4;
+
+                      fill-rule: nonzero;
+                      opacity: 1;
+                    "
+                    class="fill-black dark:fill-sky-200"
+                    transform=" translate(-25, -24.5)"
+                    d="M 20 8 C 13.539063 8 8.367188 13.109375 8.09375 19.5 C 3.417969 20.777344 0 24.996094 0 30 C 0 36.046875 4.953125 41 11 41 L 41 41 C 45.945313 41 50 36.945313 50 32 C 50 28.101563 47.402344 24.792969 43.90625 23.625 C 43.695313 17.761719 38.910156 13 33 13 C 31.960938 13 30.992188 13.257813 30.03125 13.53125 C 27.882813 10.261719 24.21875 8 20 8 Z M 20 10 C 23.726563 10 26.992188 12.09375 28.71875 15.09375 L 29.15625 15.8125 L 29.9375 15.53125 C 30.9375 15.167969 31.910156 15 33 15 C 37.953125 15 42 19.046875 42 24 L 42 25.09375 L 42.78125 25.28125 C 45.714844 25.972656 48 28.769531 48 32 C 48 35.855469 44.855469 39 41 39 L 11 39 C 6.046875 39 2 34.953125 2 30 C 2 25.671875 5.058594 21.996094 9.1875 21.1875 L 10 21.03125 L 10 20 C 10 14.433594 14.433594 10 20 10 Z M 24 20 L 24 31.5625 L 19.71875 27.28125 L 18.28125 28.71875 L 24.28125 34.71875 L 25 35.40625 L 25.71875 34.71875 L 31.71875 28.71875 L 30.28125 27.28125 L 26 31.5625 L 26 20 Z"
+                    stroke-linecap="round"
+                  />
+                </g>
+              </svg>
+
+              Download For Free
+            </button>
+
+            <button
+              type="button"
+              class="flex gap-4 transition-colors duration-500 text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
+            >
+              <svg
+                id="GitHub_24"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <rect
+                  width="24"
+                  height="24"
+                  fill="#000000"
+                  stroke="none"
+                  opacity="0"
+                />
+
+                <g transform="matrix(0.83 0 0 0.83 12 12)">
+                  <path
+                    style="
+                      stroke: none;
+                      stroke-width: 1;
+                      stroke-dasharray: none;
+                      stroke-linecap: butt;
+                      stroke-dashoffset: 0;
+                      stroke-linejoin: miter;
+                      stroke-miterlimit: 4;
+
+                      fill-rule: nonzero;
+                      opacity: 1;
+                    "
+                    class="fill-white dark:fill-sky-200"
+                    transform=" translate(-15, -14.82)"
+                    d="M 15 3 C 8.373 3 3 8.373 3 15 C 3 20.623 6.872 25.328 12.092 26.630000000000003 C 12.036 26.468 12 26.28 12 26.047 L 12 23.996000000000002 C 11.513 23.996000000000002 10.697 23.996000000000002 10.492 23.996000000000002 C 9.671000000000001 23.996000000000002 8.941 23.643 8.587000000000002 22.987000000000002 C 8.194 22.258000000000003 8.126000000000001 21.143 7.152000000000001 20.461000000000002 C 6.863000000000001 20.234 7.083000000000001 19.975 7.416000000000001 20.01 C 8.031 20.184 8.541 20.606 9.021 21.232000000000003 C 9.499 21.859 9.724 22.001 10.617 22.001 C 11.05 22.001 11.698 21.976000000000003 12.308000000000002 21.880000000000003 C 12.636000000000001 21.047000000000004 13.203000000000001 20.28 13.896 19.918000000000003 C 9.9 19.507 7.993000000000001 17.519000000000002 7.993000000000001 14.820000000000004 C 7.993000000000001 13.658000000000005 8.488000000000001 12.534000000000004 9.329 11.587000000000003 C 9.053 10.647 8.706 8.73 9.435 8 C 11.233 8 12.32 9.166 12.581 9.481 C 13.477 9.174 14.461 9 15.495 9 C 16.531 9 17.519 9.174 18.416999999999998 9.483 C 18.675 9.17 19.763 8 21.565 8 C 22.297 8.731 21.946 10.656 21.667 11.594 C 22.503 12.539 22.995 13.66 22.995 14.82 C 22.995 17.517 21.091 19.504 17.101 19.917 C 18.199 20.49 19 22.1 19 23.313 L 19 26.046999999999997 C 19 26.150999999999996 18.977 26.225999999999996 18.965 26.314999999999998 C 23.641 24.676 27 20.236 27 15 C 27 8.373 21.627 3 15 3 z"
+                    stroke-linecap="round"
+                  />
+                </g>
+              </svg>
+              Github
+            </button>
+          </div>
+        </div>
+
+        <div class="mb-auto md:mb-0 md:w-3/5">
+          <img
+            src="imgs/hero.DlKDY3ml_Z1VhsC8.webp"
+            class="w-full drop-shadow-2xl dark:drop-shadow-[0_10px_10px_rgba(255,255,255,0.25)]"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="container mx-auto max-w-screen-xl my-5">
+      <h2 class="text-5xl font-main-heading mb-5">
+        Everything you need to start a website <div class="inline-block"><span id="typing" class=" animate-typing-blink   border-e-2  w-0 inline-block  overflow-hidden  font-mono text-3xl text-orange-300">Astro </span></div>
+      </h2>
+      <p class="text-lg">
+        Astro comes batteries included. It takes the best parts of
+        state-of-the-art tools and adds its own innovations.
+      </p>
+
+      <div class="grid gap-7 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 my-10">
+        <div class="flex gap-3">
+          <div class="icon">
+            <div
+              class="size-8 rounded-full flex justify-center items-center bg-black dark:bg-white"
+            >
+              <svg
+                id="Search_24"
+                width="15"
+                height="15"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <rect
+                  width="24"
+                  height="24"
+                  stroke="none"
+                  fill="#000000"
+                  opacity="0"
+                />
+
+                <g transform="matrix(0.83 0 0 0.83 12 12)">
+                  <path
+                    style="
+                      stroke: none;
+                      stroke-width: 1;
+                      stroke-dasharray: none;
+                      stroke-linecap: butt;
+                      stroke-dashoffset: 0;
+                      stroke-linejoin: miter;
+                      stroke-miterlimit: 4;
+
+                      fill-rule: nonzero;
+                      opacity: 1;
+                    "
+                    class="fill-white dark:fill-black"
+                    transform=" translate(-15.01, -15.01)"
+                    d="M 13 3 C 7.4889971 3 3 7.4889971 3 13 C 3 18.511003 7.4889971 23 13 23 C 15.396508 23 17.597385 22.148986 19.322266 20.736328 L 25.292969 26.707031 C 25.54378557313715 26.968271794792877 25.916235992218144 27.07350663500295 26.26667805152247 26.982149810984033 C 26.617120110826793 26.89079298696512 26.89079298696512 26.617120110826793 26.982149810984033 26.26667805152247 C 27.07350663500295 25.916235992218144 26.968271794792877 25.54378557313715 26.707031 25.292969 L 20.736328 19.322266 C 22.148986 17.597385 23 15.396508 23 13 C 23 7.4889971 18.511003 3 13 3 z M 13 5 C 17.430123 5 21 8.5698774 21 13 C 21 17.430123 17.430123 21 13 21 C 8.5698774 21 5 17.430123 5 13 C 5 8.5698774 8.5698774 5 13 5 z"
+                    stroke-linecap="round"
+                  />
+                </g>
+              </svg>
+            </div>
+          </div>
+          <div class="">
+            <h3 class="mb-3">Bring Your Own Framework</h3>
+
+            <p class="text-slate-500">
+              Build your site using React, Svelte, Vue, Preact, web components,
+              or just plain ol' HTML + JavaScript.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex gap-3">
+          <div class="icon">
+            <div
+              class="size-8 rounded-full flex justify-center items-center bg-black dark:bg-white"
+            >
+              <svg
+                id="Search_24"
+                width="15"
+                height="15"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <rect
+                  width="24"
+                  height="24"
+                  stroke="none"
+                  fill="#000000"
+                  opacity="0"
+                />
+
+                <g transform="matrix(0.83 0 0 0.83 12 12)">
+                  <path
+                    style="
+                      stroke: none;
+                      stroke-width: 1;
+                      stroke-dasharray: none;
+                      stroke-linecap: butt;
+                      stroke-dashoffset: 0;
+                      stroke-linejoin: miter;
+                      stroke-miterlimit: 4;
+
+                      fill-rule: nonzero;
+                      opacity: 1;
+                    "
+                    class="fill-white dark:fill-black"
+                    transform=" translate(-15.01, -15.01)"
+                    d="M 13 3 C 7.4889971 3 3 7.4889971 3 13 C 3 18.511003 7.4889971 23 13 23 C 15.396508 23 17.597385 22.148986 19.322266 20.736328 L 25.292969 26.707031 C 25.54378557313715 26.968271794792877 25.916235992218144 27.07350663500295 26.26667805152247 26.982149810984033 C 26.617120110826793 26.89079298696512 26.89079298696512 26.617120110826793 26.982149810984033 26.26667805152247 C 27.07350663500295 25.916235992218144 26.968271794792877 25.54378557313715 26.707031 25.292969 L 20.736328 19.322266 C 22.148986 17.597385 23 15.396508 23 13 C 23 7.4889971 18.511003 3 13 3 z M 13 5 C 17.430123 5 21 8.5698774 21 13 C 21 17.430123 17.430123 21 13 21 C 8.5698774 21 5 17.430123 5 13 C 5 8.5698774 8.5698774 5 13 5 z"
+                    stroke-linecap="round"
+                  />
+                </g>
+              </svg>
+            </div>
+          </div>
+          <div class="">
+            <h3 class="mb-3">Bring Your Own Framework</h3>
+
+            <p class="text-slate-500">
+              Build your site using React, Svelte, Vue, Preact, web components,
+              or just plain ol' HTML + JavaScript.
+            </p>
+          </div>
+        </div>
+        <div class="flex gap-3">
+          <div class="icon">
+            <div
+              class="size-8 rounded-full flex justify-center items-center bg-black dark:bg-white"
+            >
+              <svg
+                id="Search_24"
+                width="15"
+                height="15"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <rect
+                  width="24"
+                  height="24"
+                  stroke="none"
+                  fill="#000000"
+                  opacity="0"
+                />
+
+                <g transform="matrix(0.83 0 0 0.83 12 12)">
+                  <path
+                    style="
+                      stroke: none;
+                      stroke-width: 1;
+                      stroke-dasharray: none;
+                      stroke-linecap: butt;
+                      stroke-dashoffset: 0;
+                      stroke-linejoin: miter;
+                      stroke-miterlimit: 4;
+
+                      fill-rule: nonzero;
+                      opacity: 1;
+                    "
+                    class="fill-white dark:fill-black"
+                    transform=" translate(-15.01, -15.01)"
+                    d="M 13 3 C 7.4889971 3 3 7.4889971 3 13 C 3 18.511003 7.4889971 23 13 23 C 15.396508 23 17.597385 22.148986 19.322266 20.736328 L 25.292969 26.707031 C 25.54378557313715 26.968271794792877 25.916235992218144 27.07350663500295 26.26667805152247 26.982149810984033 C 26.617120110826793 26.89079298696512 26.89079298696512 26.617120110826793 26.982149810984033 26.26667805152247 C 27.07350663500295 25.916235992218144 26.968271794792877 25.54378557313715 26.707031 25.292969 L 20.736328 19.322266 C 22.148986 17.597385 23 15.396508 23 13 C 23 7.4889971 18.511003 3 13 3 z M 13 5 C 17.430123 5 21 8.5698774 21 13 C 21 17.430123 17.430123 21 13 21 C 8.5698774 21 5 17.430123 5 13 C 5 8.5698774 8.5698774 5 13 5 z"
+                    stroke-linecap="round"
+                  />
+                </g>
+              </svg>
+            </div>
+          </div>
+          <div class="">
+            <h3 class="mb-3">Bring Your Own Framework</h3>
+
+            <p class="text-slate-500">
+              Build your site using React, Svelte, Vue, Preact, web components,
+              or just plain ol' HTML + JavaScript.
+            </p>
+          </div>
+        </div>
+        <div class="flex gap-3">
+          <div class="icon">
+            <div
+              class="size-8 rounded-full flex justify-center items-center bg-black dark:bg-white"
+            >
+              <svg
+                id="Search_24"
+                width="15"
+                height="15"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <rect
+                  width="24"
+                  height="24"
+                  stroke="none"
+                  fill="#000000"
+                  opacity="0"
+                />
+
+                <g transform="matrix(0.83 0 0 0.83 12 12)">
+                  <path
+                    style="
+                      stroke: none;
+                      stroke-width: 1;
+                      stroke-dasharray: none;
+                      stroke-linecap: butt;
+                      stroke-dashoffset: 0;
+                      stroke-linejoin: miter;
+                      stroke-miterlimit: 4;
+
+                      fill-rule: nonzero;
+                      opacity: 1;
+                    "
+                    class="fill-white dark:fill-black"
+                    transform=" translate(-15.01, -15.01)"
+                    d="M 13 3 C 7.4889971 3 3 7.4889971 3 13 C 3 18.511003 7.4889971 23 13 23 C 15.396508 23 17.597385 22.148986 19.322266 20.736328 L 25.292969 26.707031 C 25.54378557313715 26.968271794792877 25.916235992218144 27.07350663500295 26.26667805152247 26.982149810984033 C 26.617120110826793 26.89079298696512 26.89079298696512 26.617120110826793 26.982149810984033 26.26667805152247 C 27.07350663500295 25.916235992218144 26.968271794792877 25.54378557313715 26.707031 25.292969 L 20.736328 19.322266 C 22.148986 17.597385 23 15.396508 23 13 C 23 7.4889971 18.511003 3 13 3 z M 13 5 C 17.430123 5 21 8.5698774 21 13 C 21 17.430123 17.430123 21 13 21 C 8.5698774 21 5 17.430123 5 13 C 5 8.5698774 8.5698774 5 13 5 z"
+                    stroke-linecap="round"
+                  />
+                </g>
+              </svg>
+            </div>
+          </div>
+          <div class="">
+            <h3 class="mb-3">Bring Your Own Framework</h3>
+
+            <p class="text-slate-500">
+              Build your site using React, Svelte, Vue, Preact, web components,
+              or just plain ol' HTML + JavaScript.
+            </p>
+          </div>
+        </div>
+        <div class="flex gap-3">
+          <div class="icon">
+            <div
+              class="size-8 rounded-full flex justify-center items-center bg-black dark:bg-white"
+            >
+              <svg
+                id="Search_24"
+                width="15"
+                height="15"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <rect
+                  width="24"
+                  height="24"
+                  stroke="none"
+                  fill="#000000"
+                  opacity="0"
+                />
+
+                <g transform="matrix(0.83 0 0 0.83 12 12)">
+                  <path
+                    style="
+                      stroke: none;
+                      stroke-width: 1;
+                      stroke-dasharray: none;
+                      stroke-linecap: butt;
+                      stroke-dashoffset: 0;
+                      stroke-linejoin: miter;
+                      stroke-miterlimit: 4;
+
+                      fill-rule: nonzero;
+                      opacity: 1;
+                    "
+                    class="fill-white dark:fill-black"
+                    transform=" translate(-15.01, -15.01)"
+                    d="M 13 3 C 7.4889971 3 3 7.4889971 3 13 C 3 18.511003 7.4889971 23 13 23 C 15.396508 23 17.597385 22.148986 19.322266 20.736328 L 25.292969 26.707031 C 25.54378557313715 26.968271794792877 25.916235992218144 27.07350663500295 26.26667805152247 26.982149810984033 C 26.617120110826793 26.89079298696512 26.89079298696512 26.617120110826793 26.982149810984033 26.26667805152247 C 27.07350663500295 25.916235992218144 26.968271794792877 25.54378557313715 26.707031 25.292969 L 20.736328 19.322266 C 22.148986 17.597385 23 15.396508 23 13 C 23 7.4889971 18.511003 3 13 3 z M 13 5 C 17.430123 5 21 8.5698774 21 13 C 21 17.430123 17.430123 21 13 21 C 8.5698774 21 5 17.430123 5 13 C 5 8.5698774 8.5698774 5 13 5 z"
+                    stroke-linecap="round"
+                  />
+                </g>
+              </svg>
+            </div>
+          </div>
+          <div class="">
+            <h3 class="mb-3">Bring Your Own Framework</h3>
+
+            <p class="text-slate-500">
+              Build your site using React, Svelte, Vue, Preact, web components,
+              or just plain ol' HTML + JavaScript.
+            </p>
+          </div>
+        </div>
+        <div class="flex gap-3">
+          <div class="icon">
+            <div
+              class="size-8 rounded-full flex justify-center items-center bg-black dark:bg-white"
+            >
+              <svg
+                id="Search_24"
+                width="15"
+                height="15"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <rect
+                  width="24"
+                  height="24"
+                  stroke="none"
+                  fill="#000000"
+                  opacity="0"
+                />
+
+                <g transform="matrix(0.83 0 0 0.83 12 12)">
+                  <path
+                    style="
+                      stroke: none;
+                      stroke-width: 1;
+                      stroke-dasharray: none;
+                      stroke-linecap: butt;
+                      stroke-dashoffset: 0;
+                      stroke-linejoin: miter;
+                      stroke-miterlimit: 4;
+
+                      fill-rule: nonzero;
+                      opacity: 1;
+                    "
+                    class="fill-white dark:fill-black"
+                    transform=" translate(-15.01, -15.01)"
+                    d="M 13 3 C 7.4889971 3 3 7.4889971 3 13 C 3 18.511003 7.4889971 23 13 23 C 15.396508 23 17.597385 22.148986 19.322266 20.736328 L 25.292969 26.707031 C 25.54378557313715 26.968271794792877 25.916235992218144 27.07350663500295 26.26667805152247 26.982149810984033 C 26.617120110826793 26.89079298696512 26.89079298696512 26.617120110826793 26.982149810984033 26.26667805152247 C 27.07350663500295 25.916235992218144 26.968271794792877 25.54378557313715 26.707031 25.292969 L 20.736328 19.322266 C 22.148986 17.597385 23 15.396508 23 13 C 23 7.4889971 18.511003 3 13 3 z M 13 5 C 17.430123 5 21 8.5698774 21 13 C 21 17.430123 17.430123 21 13 21 C 8.5698774 21 5 17.430123 5 13 C 5 8.5698774 8.5698774 5 13 5 z"
+                    stroke-linecap="round"
+                  />
+                </g>
+              </svg>
+            </div>
+          </div>
+          <div class="">
+            <h3 class="mb-3">Bring Your Own Framework</h3>
+
+            <p class="text-slate-500">
+              Build your site using React, Svelte, Vue, Preact, web components,
+              or just plain ol' HTML + JavaScript.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section
+      class="bg-white dark:bg-gray-900 container mx-auto max-w-screen-xl"
+    >
+      <div
+        class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6"
+      >
+        <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+          <h2
+            class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
+          >
+            We didn't reinvent the wheel
+          </h2>
+          <p class="mb-4">
+            We are strategists, designers and developers. Innovators and problem
+            solvers. Small enough to be simple and quick, but big enough to
+            deliver the scope you want at the pace you need. Small enough to be
+            simple and quick, but big enough to deliver the scope you want at
+            the pace you need.
+          </p>
+          <p>
+            We are strategists, designers and developers. Innovators and problem
+            solvers. Small enough to be simple and quick.
+          </p>
+        </div>
+        <div class="grid grid-cols-2 gap-4 mt-8">
+          <img
+            class="w-full rounded-lg"
+            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-2.png"
+            alt="office content 1"
+          />
+          <img
+            class="mt-4 w-full lg:mt-10 rounded-lg"
+            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/office-long-1.png"
+            alt="office content 2"
+          />
+        </div>
+      </div>
+    </section>
+
+    <div class="flex flex-wrap gap-2">
+      <div class="h-[40vh] grow">
+        <img
+          class="h-full w-full object-cover"
+          src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/content-gallery-1.png"
+          alt="content gallery 1"
+        />
+      </div>
+      <div class="h-[40vh] grow">
+        <img
+          class="h-full w-full object-cover"
+          src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/content-gallery-2.png"
+          alt="content gallery 2"
+        />
+      </div>
+      <div class="h-[40vh] grow">
+        <img
+          class="h-full w-full object-cover"
+          src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/content-gallery-3.png"
+          alt="content gallery 3"
+        />
+      </div>
+      <div class="h-[40vh] grow">
+        <img
+          class="h-full w-full object-cover"
+          src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/content-gallery-4.png"
+          alt="content gallery 4"
+        />
+      </div>
+
+      <div class="h-[40vh] grow">
+        <img
+          class="h-full w-full object-cover"
+          src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/content-gallery-5.png"
+          alt="content gallery 6"
+        />
+      </div>
+      <div class="h-[40vh] grow">
+        <img
+          class="h-full w-full object-cover"
+          src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/content/content-gallery-6.png"
+          alt="content gallery 6"
+        />
+      </div>
+    </div>
+
+    <footer class="bg-white rounded-lg shadow dark:bg-gray-900 m-4">
+      <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+        <div class="sm:flex sm:items-center sm:justify-between">
+          <a
+            href="https://flowbite.com/"
+            class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse"
+          >
+            
+            <span
+              class="self-center font-main-heading text-2xl font-semibold whitespace-nowrap dark:text-white"
+              >Astro</span
+            >
+          </a>
+          <ul
+            class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400"
+          >
+            <li>
+              <a href="#" class="hover:underline me-4 md:me-6">About</a>
+            </li>
+            <li>
+              <a href="#" class="hover:underline me-4 md:me-6"
+                >Privacy Policy</a
+              >
+            </li>
+            <li>
+              <a href="#" class="hover:underline me-4 md:me-6">Licensing</a>
+            </li>
+            <li>
+              <a href="#" class="hover:underline">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <hr
+          class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8"
+        />
+        <span
+          class="block text-sm text-gray-500 sm:text-center dark:text-gray-400"
+          >© 2023
+          <a href="https://flowbite.com/" class="hover:underline">Flowbite™</a>.
+          All Rights Reserved.</span
+        >
+      </div>
+    </footer>
+
+    <script src="./flowbite.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
