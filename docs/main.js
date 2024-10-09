@@ -47,6 +47,7 @@ themeToggleBtn.addEventListener('click', function() {
 });
 
 
+console.log('hiii');
 
 const typingEl = document.querySelector('#typing');
 const words = [ "Designer" , "Developer" , typingEl.textContent]
